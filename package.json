@@ -1,0 +1,17 @@
+{
+  "name": "cerberus",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Drake Aren Nelson",
+  "license": "MIT",
+  "private": true,
+  "scripts": {
+    "test": "jest"
+  },
+  "dependencies": {
+    "ramda": "^0.28.0"
+  },
+  "devDependencies": {
+    "jest": "^29.3.1"
+  }
+}
