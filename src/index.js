@@ -66,9 +66,9 @@ function getActions(policies, { role, actor, resource, subject }) {
   );
 }
 
-function isAllowTo(policies, { role, actor, resource, subject, action }) {
+function isAllowed(policies, { role, actor, resource, subject, action }) {
   const actions = getActions(policies, { role, actor, resource, subject });
   return actions.includes(action);
 }
 
-module.exports = { check, load, getActions, isAllowTo };
+module.exports = { check, load, getActions, isAllowed };

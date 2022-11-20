@@ -256,3 +256,14 @@ test("Admin should not have 'delete' action for itself ", () => {
   })
   expect(actions).toEqual(['create', 'read', 'update'])
 })
+
+test("isAllowed works as expected", () => {
+  const isAllowed = cerberus.isAllowed(permissions, {
+    role: "admin",
+    actor: { id: 1 },
+    resource: "user",
+    subject: { id: 1 },
+    action: "update",
+  })
+  expect(isAllowed).toBe(true)
+})
